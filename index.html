@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>WebSite Development</title>
 	<link rel="stylesheet" href="styles.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 <body>
 
@@ -34,8 +35,9 @@
 
 	<div class="about" id="about">
 		<h1 class="title">About Us</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, eveniet temporibus reprehenderit. Veniam sunt corrupti necessitatibus quam, quia doloribus nesciunt ut eveniet, alias aspernatur eum perferendis commodi doloremque recusandae tenetur quis cumque voluptatibus officiis ea excepturi dignissimos! Repellat molestias iusto dicta facere ipsum, harum maiores illum laborum tenetur? Explicabo, cupiditate!</p>
-		<div class="btn"><a href="#">Learn More</a></div>
+		<p class="comment more">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, eveniet temporibus reprehenderit. Veniam sunt corrupti necessitatibus quam, quia doloribus nesciunt ut eveniet, alias aspernatur eum perferendis commodi doloremque recusandae tenetur quis cumque voluptatibus officiis ea excepturi dignissimos! Repellat molestias iusto dicta facere ipsum, harum maiores illum laborum tenetur? Explicabo, cupiditate!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, eveniet temporibus reprehenderit. Veniam sunt corrupti necessitatibus quam, quia doloribus nesciunt ut eveniet, alias aspernatur eum perferendis commodi doloremque recusandae tenetur quis cumque voluptatibus officiis ea excepturi dignissimos! Repellat molestias iusto dicta facere ipsum, harum maiores illum laborum tenetur? Explicabo, cupiditate!</p>
+
+			<!-- <div class="btn"><a href="#">Learn More</a></div> -->
 	</div>
 
 	<div class="services" id="services">
@@ -105,5 +107,42 @@
 	</div>
 </div>	
 	
+
+
+	<script>
+	$(document).ready(function() {
+  var showChar = 300;
+  var ellipsestext = "...";
+  var moretext = "Learn more";
+  var lesstext = "Less";
+  $('.more').each(function() {
+    var content = $(this).html();
+
+    if(content.length > showChar) {
+
+      var c = content.substr(0, showChar);
+      var h = content.substr(showChar-1, content.length - showChar);
+
+      var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+      $(this).html(html);
+    }
+
+  });
+
+  $(".morelink").click(function(){
+    if($(this).hasClass("less")) {
+      $(this).removeClass("less");
+      $(this).html(moretext);
+    } else {
+      $(this).addClass("less");
+      $(this).html(lesstext);
+    }
+    $(this).parent().prev().toggle();
+    $(this).prev().toggle();
+    return false;
+  });
+});
+</script>
 </body>
 </html>

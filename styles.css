@@ -19,7 +19,31 @@ h1.title{
 	word-spacing: 25px;
 	letter-spacing: 5px;
 }
+/*learn more*/
+a {
+  color: #0254EB
+}
+a:visited {
+  color: #0254EB
+}
 
+a.morelink {
+  width: 180px;
+    height: 35px;
+    line-height: 35px;
+    border: 2px solid #fb2274;
+    color: #fb2274;
+    display: block;
+    margin: 25px auto 0;
+    text-align: center;
+    text-decoration: none;
+}
+a:hover.morelink{color:green;}
+.morecontent span {
+  display: none;
+}
+
+/*end jquary style*/
 p{
 	margin-bottom: 15px;
 	font-size: 14px;
@@ -224,6 +248,9 @@ p{
 
 	.banner_content{
 		margin-top: 35px;
+	}
+	p{
+		text-align: justify;
 	}
 
 }
