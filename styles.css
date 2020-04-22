@@ -139,18 +139,32 @@ p{
 .diff_services {
     margin-top: 35px;
     display: flex;
+    
     justify-content: space-between;
 }
 
 .diff_services .diff_services_item {
-    width: 30%;
+   width: 30%;
+	height: auto;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
 }
 
 .diff_services .diff_services_item img {
-    width: 100%;
+   /*width: 100%;*/
     margin-bottom: 25px;
+    display: block;
+	width: 100%;
+	height: auto;
+	transition: all 0.5s ease;
 }
 
+.diff_services .diff_services_item  img:hover 
+{
+	transform: scale(0.8);
+
+}
 .diff_services .diff_services_item h3 {
     color: #fb2274;
     margin-bottom: 15px;
@@ -208,7 +222,7 @@ p{
 	transition: all 0.5s ease;
 }
 
-.ourteam_wrapper .team_members:hover img{
+.ourteam_wrapper .team_members img:hover{
 	transform: scale(1.1);
 }
 
@@ -224,7 +238,66 @@ p{
 	color: #fff;
 }
 
+/*example*/
+ .blog{
+    background: url('../assets/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100vh;
+    width: 100%;
+    background-size: 65%;
+}
 
+.blog .blog-post{
+    padding-top: 6rem;
+}
+
+ .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+ .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+ .blog-content span{
+    display: block;
+}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--midnight);
+}
+
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;
+}
+/*end example*/
 
 @media (max-width: 720px){
 
