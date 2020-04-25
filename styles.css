@@ -24,6 +24,31 @@ a {
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
+.btn-ber{
+    margin-top: 30px;
+}
+
+.get_btn{
+    background: #ffffff;
+    color: #333333;
+    padding: 14px 20px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+.get_btn:hover{
+    color: #ffffff;
+}
+
+.learn_btn{
+    background: #333333;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+.learn_btn:hover{
+    color: #ffffff;
+}
 .section {
     display: block;
     position: relative;
@@ -180,17 +205,40 @@ p{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+    
 }
+
 
 .banner_content{
 	text-align: center;
 	color: #fff;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0;
+    font-weight: normal;
+    position: relative;
+    padding: 0 0 10px 0;
+    font-weight: normal;
+    line-height: 120% !important;
+    color: #333333;
+    margin: 0
+}
+h2 {
+    font-size: 18px
+}
 .banner_content h1{
-	text-transform: uppercase;
+	/*text-transform: uppercase;
 	line-height: 38px;
-	margin-bottom: 15px;
+	margin-bottom: 15px;*/
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 62px;
+    text-transform: capitalize;
 }
 
 .banner_content h1 span{
@@ -405,6 +453,7 @@ p{
 .banner_image{
 	height: 650px;
 }
+
 /*end our team*/
 
 /* Contact us */
@@ -542,7 +591,19 @@ section .container .owl-nav{
 		height: auto;
 		flex-direction: column;
 	}
-	
+    .banner_image{
+    height: 650px;
+}
+	.banner_content h1{
+    /*text-transform: uppercase;
+    line-height: 38px;
+    margin-bottom: 15px;*/
+    margin-top: 30px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: capitalize;
+}
 	.logo{
 		margin-bottom: 25px;
 	}

@@ -1,3 +1,10 @@
+/*animatedHeader*/
+$(function() {
+    $('.animate-clip').animatedHeadline({
+            animationType: 'clip'
+        });
+});
+
 const responsive = {
     0: {
         items: 1
@@ -46,3 +53,5 @@ $(document).ready(function () {
     AOS.init();
 
 });
+
+
